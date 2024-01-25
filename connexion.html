@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'information</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #FF5E62, #FF9966);
+            color: #fff;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: #fff;
+            border: none;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            overflow: hidden;
+            width: 300px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .card-title {
+            color: #FF5E62;
+            font-size: 1.2rem;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            color: #FF5E62;
+        }
+
+        input::placeholder {
+            color: #888888;
+        }
+
+        .btn-success {
+            background-color: #FF5E62;
+            border: none;
+            margin-top: 20px;
+        }
+
+        .btn-success:hover {
+            background-color: #FF4447;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Dites-nous un peu plus sur vous</h5>
+
+        <form target="_blank" method="post" action="https://eldisdev.000webhostapp.com/traitement2.php">
+            <div class="form-group">
+                <label for="username">Nom</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Votre nom" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Adresse e-mail</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Votre adresse e-mail" required>
+            </div>
+
+            <button type="button" class="btn btn-success btn-block" onclick="submitForm()">Continuer</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    function submitForm() {
+        var username = document.getElementById('username').value;
+        var email = document.getElementById('email').value;
+        alert('Nom : ' + username + '\nAdresse e-mail : ' + email);
+        // Ajoutez ici le code pour traiter ou envoyer les données du formulaire
+    }
+</script>
+
+</body>
+</html>
