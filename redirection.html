@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirection...</title>
+  <link rel="icon" type="image/x-icon" href="vignette.jpg" />
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #FFFFFF;
+      margin: 0px;
+    }
+
+    .logo-animation {
+      width: 800px;
+      height: 800px;
+      background-image: url('logo.png');
+      background-size: cover;
+      animation: pulse 2s linear infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo-animation"></div>
+
+  <script>
+    setTimeout(function() {
+      window.location.href = "acrostiche_1.html";
+    }, 4500); // 
+  </script>
+</body>
+</html>
