@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Acrostiches de Majoie | Par Eldis</title>
+  <meta name="description" content="Jolis acrostiches du prénom Majoie faits par Eldis">
+  <meta property="og:image" content="vignette.jpg">
+  <link rel="icon" type="image/x-icon" href="https://majoie-acrostiches.cloudns.org/vignette.jpg" />
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #FFFFFF;
+      margin: 0; /* Ajout de cette ligne pour réinitialiser les marges du body */
+    }
+
+    .logo-animation {
+      width: 800px;
+      height: 800px;
+      background-image: url('logo.png');
+      background-size: cover;
+      animation: pulse 2s linear infinite;
+      display: flex; /* Ajout de cette ligne pour activer le centrage vertical */
+      justify-content: center; /* Ajout de cette ligne pour centrer horizontalement */
+      align-items: center; /* Ajout de cette ligne pour centrer verticalement */
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo-animation"></div>
+
+  <script>
+    setTimeout(function() {
+      window.location.href = "accueil.html";
+    }, 4500);
+  </script>
+</body>
+</html>
